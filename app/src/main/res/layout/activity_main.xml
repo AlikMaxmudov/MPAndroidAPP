@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/preview_display_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/no_camera_access_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/no_camera_access" />
+
+        <SurfaceView
+            android:id="@+id/preview_display_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/switch_camera_button"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/baseline_flip_camera"
+            android:backgroundTint="@color/white"
+            android:textSize="1sp"
+            android:textColor="@color/white"
+            android:text="q" />
+
+        <TextView
+            android:id="@+id/status_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/right_angle_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Угол правого сустава: 0"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-condensed-light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/left_angle_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Угол левого сустава: 0"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed-light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/right_angle_text_view"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="90dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Счет" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

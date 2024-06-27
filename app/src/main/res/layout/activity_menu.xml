@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".MenuActivity">
+
+    <!-- Главный контент, который будет отображаться под Navigation Drawer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ImageView для отображения фотографии -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mainbackground"
+            android:scaleType="centerCrop"/>
+
+        <!-- TextView с картинкой и текстом, которая будет служить кнопкой -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Тренировка 'ко рту'"
+            android:textAlignment="center"
+            android:background="@drawable/ripple_effect"
+            android:textColor="#3B84F1"
+            android:padding="18dp"
+            android:layout_marginTop="32dp"
+            android:id="@+id/StartToTheMouth"
+            android:textSize="20dp" />
+
+        />
+    </FrameLayout>
+
+    <!-- NavigationView должен быть последним для правильного отображения -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"/>
+</androidx.drawerlayout.widget.DrawerLayout>
